@@ -5,8 +5,6 @@ Small-floating Target Detection in Sea Clutter by Classifying Visual Feature in 
 This is the **python** implementation of the - 
 [Small-floating Target Detection in Sea Clutter by Classifying Visual Feature in Time Doppler Spectra](https://arxiv.org/abs/2009.04185).
 
-%[Source paper](https://github.com/joeyee/MKCF/blob/master/MKCF_SourcePaper_SingleColumn.pdf) of the preprint version with supplementary %materials could be download at Github.
-
 ## Requirements
 - python - 3.6.5
 - opencv-python
@@ -32,8 +30,8 @@ Train the v-SVM with impure samples.
 Sort the distances to the learned center. Select the sample with maximal distance as the target. 
 
 ## Introduction
-This algorithm is introduced in [paper](https://arxiv.org/abs/2009.04185), which is under review. Once the paper is allowed to be published, we will release it soon.
-Now we have published the data loading code, which is a Python re-implementation according to the Matlab version on the IPIX website.
+This algorithm is introduced in [paper](https://arxiv.org/abs/2009.04185), which is under review. Once the paper is allowed to be published, we will release all the codes soon.
+Now we have published the data loading code, which is a Python re-implementation according to the Matlab version on IPIX website.
 ## Bibtex
 
 @misc{zhou2020smallfloating,
