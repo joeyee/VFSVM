@@ -24,12 +24,12 @@ import time
 
 
 def make_tdmat_image():
-    fileprefix = '/Users/yizhou/Radar_Datasets/IPIX/'
+    fileprefix = '/Radar_Datasets/IPIX/'
     Nf = 512#512#1024#512  # 64#128#256#512*2
     Nt = 2 ** 17  # 60000 for 1998file,  #131072 for 1993file
 
     #loading csv file for listing the wanted filenames, primary and secondary cells
-    samples_info = pd.read_csv('/Users/yizhou/Radar_Datasets/IPIX/filename_labels.csv',
+    samples_info = pd.read_csv('/Radar_Datasets/IPIX/filename_labels.csv',
                                index_col='Label', sep=",")
     file_names   = samples_info['file_name'].tolist()
     primaries    = samples_info['primary'].tolist()
@@ -546,7 +546,7 @@ def segmentation(frame, lbp_contrast_select = False, kval=1, least_wh = (3,3), m
     return blob_bb_list, bin_image
 
 def test_cfar_tf():
-    fileprefix = '/Users/yizhou/Radar_Datasets/IPIX/'
+    fileprefix = '/Radar_Datasets/IPIX/'
     Nf = 512  # 64#128#256#512*2
     Nt = 2**17 # 60000 for 1998file,  #131072 for 1993file
     samples_info = pd.read_csv('/Users/yizhou/Radar_Datasets/IPIX/filename_labels.csv',
@@ -769,7 +769,7 @@ if __name__=='__main__':
     #get_sub_image_features()
     fileprefix = '/Users/yizhou/Radar_Datasets/IPIX/'
     Nf  = 128#64#128#256#512*2
-    samples_info = pd.read_csv('/Users/yizhou/Radar_Datasets/IPIX/filename_labels.csv',
+    samples_info = pd.read_csv('/Radar_Datasets/IPIX/filename_labels.csv',
                                index_col='Label',sep=",")
     file_names = samples_info['file_name'].tolist()
     primaries  = samples_info['primary'].tolist()
