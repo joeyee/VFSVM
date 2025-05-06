@@ -181,7 +181,7 @@ def get_lbp_hist(bin_image, echos):
 
 
 if __name__=='__main__':
-    file_prefix = '/Users/yizhou/Radar_Datasets/RecordEcho/2018-01-24-19_05_19-1/'
+    file_prefix = '/Radar_Datasets/RecordEcho/'
     #test_frame = np.array(Image.open('%s/%02d.png' % (file_prefix, frame_no)))
     file_names = glob.glob(file_prefix+'*.png')
     file_names.sort()
