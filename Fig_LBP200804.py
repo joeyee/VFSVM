@@ -23,7 +23,7 @@ import cfar_segmentation_200527 as cfar_model     # cfar
 import MCF_20200603             as mcf_model
 import utilities_200611         as uti            # personal tools
 
-LBP_FIG_PATH = '/Users/yizhou/code/inesa_it_radar_singal_process/result_images/lbp/'
+LBP_FIG_PATH = './result_images/lbp/'
 def fig_target_TF(frame, str_name):
     frame_jet = cv2.applyColorMap(frame, cv2.COLORMAP_JET)
     frame_jet = cv2.cvtColor(frame_jet, cv2.COLOR_BGR2RGB)
