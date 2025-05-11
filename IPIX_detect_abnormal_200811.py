@@ -252,7 +252,7 @@ def make_tdmat_image():
                 print(fileyear, filekey, txmode, '(gt:%2d), %s' % (primary_rangebin, 'Wrong'))
 
 
-            # figPath = '/Users/yizhou/code/inesa_it_radar_singal_process/result_images/lbp/'
+            # figPath = '/Users/yizhou/code/result_images/lbp/'
             # figlbp.savefig(os.path.join(figPath, '%s_%s_lbp.png'%(filekey, txmode)),bbox_inches='tight', pad_inches=2, dpi=200)
             # figvar.savefig(os.path.join(figPath, '%s_%s_var.png'%(filekey, txmode)), bbox_inches='tight', pad_inches=2, dpi=200)
             # figjd.savefig(os.path.join(figPath, '%s_%s_jd.png'%(filekey, txmode)), bbox_inches='tight', pad_inches=2, dpi=200)
