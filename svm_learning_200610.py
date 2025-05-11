@@ -95,10 +95,10 @@ def load_feature_labels():
     lbp_feature = np.concatenate((target_ini, bhist)) # len = 8 + 26
     :return:
     '''
-    feature_path = '/Users/yizhou/code/inesa_it_radar_singal_process/inesa_template/'
-    #hog_filename = 'inesa_201801_hog.dat'
-    lbp_neg_filename = 'inesa_201801_neg_lbp_P24xR3.dat'
-    lbp_pos_filename = 'inesa_201801_lbp_P24xR3.dat'
+    feature_path = '/Users/yizhou/template/'
+    #hog_filename = '201801_hog.dat'
+    lbp_neg_filename = '201801_neg_lbp_P24xR3.dat'
+    lbp_pos_filename = '201801_lbp_P24xR3.dat'
 
     lbp_neg_file = open(feature_path + lbp_neg_filename, 'rb')
     lbp_neg_dat = np.fromfile(lbp_neg_file, 'float')
@@ -474,17 +474,17 @@ def get_radar_tpr_fpr(threshs, yscores, ytests, test_samples_features):
         # print('fpr_in_pixel %.2e, fpr_in_rect %.2e' % ((fp_in_pixel/gt_negative_in_pixel), (fp_in_rect / gt_negative_in_rect)))
     return np.array(fpr), np.array(tpr)
 
-def train_test_inesa():
+def train_test_template():
     '''
-    Train and test  inesa data with varying imbalance positive and negative samples.
+    Train and test echo data with varying imbalance positive and negative samples.
     Try different threshold for AUC test.
     :return:
     Need test parameters for the performance of SVM classifiers.
 
     '''
-    feature_file_prefix = '/Users/yizhou/code/inesa_it_radar_singal_process/inesa_template/'
-    gt_pos_lbp_features_file = open(feature_file_prefix + 'inesae_gt_pos.dat','rb')
-    gt_neg_lbp_features_file = open(feature_file_prefix + 'inesae_gt_neg.dat','rb')
+    feature_file_prefix = '/Users/yizhou/template/'
+    gt_pos_lbp_features_file = open(feature_file_prefix + 'gt_pos.dat','rb')
+    gt_neg_lbp_features_file = open(feature_file_prefix + 'gt_neg.dat','rb')
 
     positive_sample_feature = np.fromfile(gt_pos_lbp_features_file)
     negative_sample_feature = np.fromfile(gt_neg_lbp_features_file)
@@ -585,7 +585,7 @@ def train_test_inesa():
 
 if __name__=='__main__':
 
-    train_test_inesa()
+    train_test_template()
     #test_svm_parameters()
 
     print(__doc__)
